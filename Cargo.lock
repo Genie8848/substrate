@@ -2178,7 +2178,7 @@ dependencies = [
  "handlebars",
  "hash-db",
  "itertools",
- "kvdb",
+ "kvdb 0.12.0",
  "lazy_static",
  "linked-hash-map",
  "log",
@@ -3479,13 +3479,21 @@ dependencies = [
 ]
 
 [[package]]
-name = "kvdb-memorydb"
-version = "0.12.0"
+name = "kvdb"
+version = "0.13.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "40d109c87bfb7759edd2a49b2649c1afe25af785d930ad6a38479b4dc70dd873"
+checksum = "e7d770dcb02bf6835887c3a979b5107a04ff4bbde97a5f0928d27404a155add9"
 dependencies = [
- "kvdb",
- "parity-util-mem",
+ "smallvec",
+]
+
+[[package]]
+name = "kvdb-memorydb"
+version = "0.13.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bf7a85fe66f9ff9cd74e169fdd2c94c6e1e74c412c99a73b4df3200b5d3760b2"
+dependencies = [
+ "kvdb 0.13.0",
  "parking_lot 0.12.1",
 ]
 
@@ -3495,7 +3503,7 @@ version = "0.16.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c076cc2cdbac89b9910c853a36c957d3862a779f31c2661174222cefb49ee597"
 dependencies = [
- "kvdb",
+ "kvdb 0.12.0",
  "log",
  "num_cpus",
  "parity-util-mem",
@@ -4521,7 +4529,7 @@ dependencies = [
  "futures",
  "hash-db",
  "kitchensink-runtime",
- "kvdb",
+ "kvdb 0.12.0",
  "kvdb-rocksdb",
  "lazy_static",
  "log",
@@ -7734,7 +7742,7 @@ dependencies = [
  "criterion",
  "hash-db",
  "kitchensink-runtime",
- "kvdb",
+ "kvdb 0.12.0",
  "kvdb-memorydb",
  "kvdb-rocksdb",
  "linked-hash-map",
@@ -9626,7 +9634,7 @@ dependencies = [
 name = "sp-database"
 version = "4.0.0-dev"
 dependencies = [
- "kvdb",
+ "kvdb 0.12.0",
  "parking_lot 0.12.1",
 ]
 
